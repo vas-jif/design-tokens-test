@@ -1,7 +1,7 @@
 import SwiftUI
 
 // Generated Design Tokens for AgentMany
-// Generated on: 2026-02-10T08:26:41.356Z
+// Generated on: 2026-02-10T08:44:59.513Z
 
 public enum DesignTokens {
     public enum Background {

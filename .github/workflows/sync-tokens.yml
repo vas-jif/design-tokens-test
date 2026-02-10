@@ -1,0 +1,46 @@
+name: Sync Figma Design Tokens
+
+on:
+  repository_dispatch:
+    types: [figma-library-published]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install axios fs-extra dotenv
+
+      - name: Run Sync Pipeline
+        env:
+          FIGMA_PAT: ${{ secrets.FIGMA_PAT }}
+          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
+        run: |
+          node scripts/fetch_variables.js
+          node scripts/parse_and_transform.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add Sources/DesignTokens/designTokens.swift
+          git diff --quiet && git diff --staged --quiet || (git commit -m "style: automated design tokens sync from figma" && git push)
+
+      - name: Post Summary to Slack/Jira (Optional)
+        if: always()
+        run: |
+          if [ -f change_summary.txt ]; then
+            cat change_summary.txt
+            # Add specific notification logic here if needed
+          fi
