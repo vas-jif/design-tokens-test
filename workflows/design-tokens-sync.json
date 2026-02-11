@@ -1,0 +1,54 @@
+{
+    "name": "AgentMany: Design Tokens Sync (Hybrid)",
+    "nodes": [
+        {
+            "parameters": {
+                "event": "library_published",
+                "fileKey": "T8cF4aVCf7XUXrPkwjwtea"
+            },
+            "name": "Figma Trigger",
+            "type": "n8n-nodes-base.figmaTrigger",
+            "typeVersion": 1,
+            "position": [
+                100,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "owner": "vas-jif",
+                "repository": "design-tokens-test",
+                "eventType": "figma-library-published"
+            },
+            "name": "Trigger GitHub Action",
+            "type": "n8n-nodes-base.github",
+            "typeVersion": 1,
+            "position": [
+                350,
+                300
+            ],
+            "credentials": {
+                "githubApi": {
+                    "id": "YOUR_GITHUB_CREDENTIAL_ID"
+                }
+            }
+        }
+    ],
+    "connections": {
+        "Figma Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Trigger GitHub Action",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "active": true
+}

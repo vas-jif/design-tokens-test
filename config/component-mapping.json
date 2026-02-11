@@ -1,0 +1,25 @@
+{
+    "mappings": [
+        {
+            "figmaComponentSetId": "23:381",
+            "swiftuiName": "AgentButton",
+            "properties": {
+                "Variant": {
+                    "Primary": ".primary",
+                    "Neutral": ".neutral",
+                    "Subtle": ".subtle"
+                },
+                "Size": {
+                    "Medium": ".medium",
+                    "Small": ".small"
+                }
+            },
+            "states": {
+                "Default": ".default",
+                "Hover": ".hover",
+                "Disabled": ".disabled"
+            },
+            "template": "Sources/DesignSystem/Templates/ButtonTemplate.swift.erb"
+        }
+    ]
+}

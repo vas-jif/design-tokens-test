@@ -1,11 +1,11 @@
 import SwiftUI
 
 // Generated Design Tokens for AgentMany
-// Generated on: 2026-02-10T08:44:59.513Z
+// Generated on: 2026-02-11T05:10:57.479Z
 
 public enum DesignTokens {
     public enum Background {
-        public static let primary = Color(light: Color(red: 1.000, green: 1.000, blue: 0.980), dark: Color(red: 1.000, green: 1.000, blue: 0.980))
+        public static let primary = Color(light: Color(red: 1.000, green: 1.000, blue: 0.984), dark: Color(red: 1.000, green: 1.000, blue: 0.984))
         public static let secondary = Color(light: Color(red: 0.949, green: 0.949, blue: 0.969), dark: Color(red: 0.949, green: 0.949, blue: 0.969))
         public static let tertiary = Color(light: Color(red: 1.000, green: 1.000, blue: 1.000), dark: Color(red: 1.000, green: 1.000, blue: 1.000))
     }
