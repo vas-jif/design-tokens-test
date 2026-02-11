@@ -1,0 +1,9 @@
+{
+    "codeConnect": {
+        "parser": "swift",
+        "label": "Agent Library",
+        "include": [
+            "Sources/AgentDesignSystem/**/*.swift"
+        ]
+    }
+}

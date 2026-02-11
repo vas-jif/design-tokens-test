@@ -79,7 +79,7 @@ public enum DesignTokens {
 `;
 
     const changes = [];
-    const outputPath = path.join('Sources', 'DesignTokens', 'designTokens.swift');
+    const outputPath = path.join('Sources', 'AgentDesignSystem', 'Tokens', 'DesignTokens.swift');
     let oldContent = '';
     if (fs.existsSync(outputPath)) {
         oldContent = await fs.readFile(outputPath, 'utf8');

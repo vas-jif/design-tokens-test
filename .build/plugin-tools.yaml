@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "AgentDesignSystem-arm64-apple-macosx15.0-debug.module": ["<AgentDesignSystem-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AgentDesignSystem-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<AgentDesignSystem-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/Components/AgentButton.swift","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/Tokens/DesignTokens.swift"]
+    outputs: ["/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/sources"]
+    description: "Write auxiliary file /Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/sources"
+
+  "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<AgentDesignSystem-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton.swift.o","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens.swift.o","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/Modules/AgentDesignSystem.swiftmodule"]
+    outputs: ["<AgentDesignSystem-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.AgentDesignSystem-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/Components/AgentButton.swift","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/Tokens/DesignTokens.swift","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/sources"]
+    outputs: ["/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton.swift.o","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens.swift.o","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/Modules/AgentDesignSystem.swiftmodule"]
+    description: "Compiling Swift Module 'AgentDesignSystem' (2 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","AgentDesignSystem","-emit-dependencies","-emit-module","-emit-module-path","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/Modules/AgentDesignSystem.swiftmodule","-output-file-map","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/sources","-I","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx12.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/include/AgentDesignSystem-Swift.h","-color-diagnostics","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","agentmany_designtokens"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Package.swift","/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

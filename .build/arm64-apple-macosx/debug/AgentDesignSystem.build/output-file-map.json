@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/master.swiftdeps"
+  },
+  "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/Components/AgentButton.swift": {
+    "dependencies": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton.d",
+    "object": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton.swift.o",
+    "swiftmodule": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton~partial.swiftmodule",
+    "swift-dependencies": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton.swiftdeps",
+    "diagnostics": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/AgentButton.dia"
+  },
+  "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/Sources/AgentDesignSystem/Tokens/DesignTokens.swift": {
+    "dependencies": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens.d",
+    "object": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens.swift.o",
+    "swiftmodule": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens~partial.swiftmodule",
+    "swift-dependencies": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens.swiftdeps",
+    "diagnostics": "/Users/contritum.vas/Desktop/Antigravity Projects/AgentMany-DesignTokens/.build/arm64-apple-macosx/debug/AgentDesignSystem.build/DesignTokens.dia"
+  }
+}

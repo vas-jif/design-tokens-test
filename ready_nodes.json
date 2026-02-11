@@ -1,0 +1,12 @@
+[
+    {
+        "id": "123:456",
+        "name": "Login Screen",
+        "type": "FRAME"
+    },
+    {
+        "id": "789:012",
+        "name": "Dashboard Widget",
+        "type": "SECTION"
+    }
+]
