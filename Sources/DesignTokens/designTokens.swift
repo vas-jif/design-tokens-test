@@ -5,7 +5,7 @@ import SwiftUI
 
 public enum DesignTokens {
     public enum Background {
-        public static let primary = Color(light: Color(red: 1.000, green: 1.000, blue: 0.980), dark: Color(red: 1.000, green: 1.000, blue: 0.980))
+        public static let primary = Color(light: Color(red: 0.200, green: 0.200, blue: 0.200), dark: Color(red: 0.100, green: 0.100, blue: 0.100))
         public static let secondary = Color(light: Color(red: 0.949, green: 0.949, blue: 0.969), dark: Color(red: 0.949, green: 0.949, blue: 0.969))
         public static let tertiary = Color(light: Color(red: 1.000, green: 1.000, blue: 1.000), dark: Color(red: 1.000, green: 1.000, blue: 1.000))
     }
