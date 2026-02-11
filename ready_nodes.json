@@ -1,0 +1,12 @@
+[
+    {
+        "id": "100:101",
+        "name": "Simple Button Frame",
+        "type": "FRAME"
+    },
+    {
+        "id": "200:202",
+        "name": "Complex Checkout Modal",
+        "type": "GROUP"
+    }
+]
