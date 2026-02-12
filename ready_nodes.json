@@ -1,0 +1,27 @@
+[
+  {
+    "id": "228:4291",
+    "name": "Text Strong",
+    "type": "COMPONENT"
+  },
+  {
+    "id": "194:345",
+    "name": "Form",
+    "type": "SECTION"
+  },
+  {
+    "id": "225:2846",
+    "name": "Promo",
+    "type": "FRAME"
+  },
+  {
+    "id": "205:1348",
+    "name": "Frame 1",
+    "type": "FRAME"
+  },
+  {
+    "id": "295:1373",
+    "name": "Info Popover",
+    "type": "COMPONENT"
+  }
+]
