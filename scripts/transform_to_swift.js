@@ -4,6 +4,7 @@ const path = require('path');
 async function transformToSwift() {
     try {
         const data = await fs.readJson('tokens/variables.json');
+        // The variables API response structure: { status: 200, error: false, meta: { variables, variableCollections } }
         const { variables, variableCollections } = data.meta;
 
         let swiftCode = `import SwiftUI\n\n// Generated Design Tokens for AgentMany\n// Generated on: ${new Date().toISOString()}\n\npublic enum DesignTokens {\n`;

@@ -24,18 +24,34 @@ async function auditCompliance() {
             return;
         }
 
-        const content = await fs.readFile(tokensPath, 'utf8');
-        const colorRegex = /static let (\w+) = Color\(light: Color\(red: ([\d.]+), green: ([\d.]+), blue: ([\d.]+)\)/g;
-        let match;
+        const rawContent = await fs.readFile(tokensPath, 'utf8');
+        const lines = rawContent.split('\n');
+        let currentEnum = "";
         const colors = {};
 
-        while ((match = colorRegex.exec(content)) !== null) {
-            colors[match[1]] = {
-                r: parseFloat(match[2]) * 255,
-                g: parseFloat(match[3]) * 255,
-                b: parseFloat(match[4]) * 255
-            };
-        }
+        const enumRegex = /public enum (\w+) \{/i;
+        const colorRegex = /(?:public\s+)?static let (\w+) = Color\(light: Color\(red: ([\d.]+), green: ([\d.]+), blue: ([\d.]+)\)/;
+
+        lines.forEach(line => {
+            const enumMatch = line.match(enumRegex);
+            if (enumMatch) {
+                currentEnum = enumMatch[1].toLowerCase();
+            }
+
+            const colorMatch = line.match(colorRegex);
+            if (colorMatch) {
+                const colorName = colorMatch[1].toLowerCase();
+                // Store with namespace context if needed, but for our simple check
+                // let's prioritize the tokens in the Background and Label enums
+                if (currentEnum === 'background' || currentEnum === 'label') {
+                    colors[colorName] = {
+                        r: parseFloat(colorMatch[2]) * 255,
+                        g: parseFloat(colorMatch[3]) * 255,
+                        b: parseFloat(colorMatch[4]) * 255
+                    };
+                }
+            }
+        });
 
         console.log('--- Design Token Compliance Audit ---');
         const backgrounds = ['primary', 'secondary', 'tertiary'];

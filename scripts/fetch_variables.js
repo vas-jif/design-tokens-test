@@ -10,7 +10,7 @@ async function fetchVariables() {
         process.exit(1);
     }
 
-    console.log(`Fetching variables for file: ${FIGMA_FILE_KEY}...`);
+    console.log(`Fetching structural data for file: ${FIGMA_FILE_KEY}...`);
 
     try {
         const response = await axios.get(
@@ -24,11 +24,11 @@ async function fetchVariables() {
 
         const data = response.data;
         await fs.ensureDir('tokens');
-        await fs.writeJson('tokens/variables.json', data, { spaces: 2 });
+        await fs.writeJson('tokens/file.json', data, { spaces: 2 });
 
-        console.log('Successfully saved variables to tokens/variables.json');
+        console.log('Successfully saved Figma file data to tokens/file.json');
     } catch (error) {
-        console.error('Error fetching variables:', error.response ? error.response.data : error.message);
+        console.error('Error fetching Figma data:', error.response ? error.response.data : error.message);
         process.exit(1);
     }
 }

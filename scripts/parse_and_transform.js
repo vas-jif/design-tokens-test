@@ -3,7 +3,7 @@ const path = require('path');
 
 async function parseAndTransform() {
     try {
-        const data = await fs.readJson('tokens/variables.json');
+        const data = await fs.readJson('tokens/file.json');
         const tokens = {};
 
         // Helper to find node by name or pattern
